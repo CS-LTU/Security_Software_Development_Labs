@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+</head>
+<body>
+    <h2>Shopping Information</h2>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Date</th>
+        </tr>
+        {% for item in shopping_data %}
+        <tr>
+            <td>{{ item['item_name'] }}</td>
+            <td>{{ item['price'] }}</td>
+            <td>{{ item['date'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/logout">Logout</a>
+</body>
+</html>
